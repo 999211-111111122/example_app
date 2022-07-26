@@ -1,0 +1,17 @@
+<div>
+  <table>
+    <tbody>
+      <% @objects.each do |object| %>
+        <tr>
+          <td><%= object %></td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= form_with(url: kredis_path) do |form| %>
+    <%= form.text_field :title %>
+    <%= form.submit %>
+  <% end %>
+</div>
